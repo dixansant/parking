@@ -1,0 +1,5 @@
+$.vlang = {
+    '':function(b){
+
+    }
+};

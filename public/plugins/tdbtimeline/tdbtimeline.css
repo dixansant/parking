@@ -1,0 +1,262 @@
+.tdbTimeline {
+    padding-top: 85px;
+    background: #f9f9f9;
+    height: 200px;
+}
+
+.tdbEvent {
+    position: absolute;
+    margin-top: -19px;
+}
+
+.bubble {
+    position: absolute;
+    background-color: rgba(158, 158, 158, 0.1);
+
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px rgba(158, 158, 158, 0.64)
+}
+
+
+.eventup .bubble {
+    top: -68px;
+    left: -15px;
+
+    padding: 9px 10px;
+}
+
+.eventdown .bubble {
+    right: -15px;
+    top: 32px;
+    padding: 9px 10px;
+}
+
+
+.eventdown .bubble:before , .eventdown .bubble:after, .eventup .bubble:before , .eventup .bubble:after {
+     content: "";
+     position: absolute;
+     width: 0;
+     height: 0;
+     border-style: solid;
+     border-color: transparent;
+     border-bottom: 0;
+ }
+
+.eventup .bubble:before {
+    bottom: -10px;
+    left: 13px;
+    border-top-color: rgba(222, 222, 222, 0.66);
+    border-width: 12px;
+}
+
+.eventup .bubble:after {
+    border-bottom: 0;
+    bottom: -8px;
+    left: 13px;
+    border-top-color: #F6F6F6;
+    border-width: 12px;
+
+}
+
+.eventdown .bubble:before {
+    bottom: 57px;
+    right: 13px;
+    border-top-color: rgba(222, 222, 222, 0.66);
+    border-width: 12px;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.eventdown .bubble:after {
+    bottom: 55px;
+    right: 13px;
+    border-top-color: #F6F6F6;
+    border-width: 12px;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+
+
+.eventup .hour-tt {
+    position: absolute;
+    font-size: 8px;
+    color: #9E9E9E;
+    white-space: nowrap;
+    margin-top: 13px;
+}
+
+.eventup .hour-tt > LABEL {
+    position: absolute;
+    left: 24px;
+    font-weight: normal;
+
+}
+
+
+.eventdown .hour-tt {
+    right: 0px;
+    position: absolute;
+    font-size: 8px;
+    color: #9E9E9E;
+    white-space: nowrap;
+}
+
+.eventdown .hour-tt > LABEL {
+    position: absolute;
+    right: 75px;
+    margin-top: -65px;
+    font-weight: normal;
+
+}
+
+
+/**/
+
+.day-digit {
+    font-size: 27px;
+    color: #4C4A4A;
+    margin-top: -9px;
+    margin-right: 5px;
+}
+
+.day-week {
+    font-size: 10px;
+    font-weight: bold;
+    color: #9E9E9E;
+}
+
+.month-year {
+    text-transform: uppercase;
+    line-height: 11px;
+    color: #4C4A4A;
+
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.event-title {
+    color: #a71930;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    margin-top: -4px;
+    white-space: nowrap;
+}
+
+
+.event-author {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #9E9E9E;
+    font-size: 8px;
+    right: 3px;
+    white-space: nowrap;
+    bottom: -10px;
+}
+
+.eventup .event-author {
+    top: -10px;
+}
+
+.just-now{
+    background-color: #004165;
+    color: white;
+
+    margin: 5px;
+    padding: 4px;
+    border: 2px solid white;
+    font-weight: bold;
+    box-shadow: 0 0 0 2px #004165;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+
+    margin-top: -19px;
+}
+
+.mainline {
+    width: 100%;
+}
+
+.future-gray {
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+}
+
+.future-opac {
+    -webkit-filter: opacity(.3);
+    filter: opacity(.3);
+}
+
+/* */
+
+
+.blink {
+    animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+    40% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .0;
+    }
+    60% {
+        opacity: 1;
+    }
+}
+
+.eventTime {
+    display: flex;
+}
+
+
+/**/
+
+.point-mark {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 10px;
+    padding: 0px 4px 1px;
+    cursor: pointer;
+    color: #aaa;
+
+    border: 0px dashed;
+}
+
+.eventup .point-mark {
+    left: 9px;
+    margin-top: -8px;
+
+    border-left-width: 1px;
+    border-top-width: 1px;
+
+}
+
+.eventdown .point-mark {
+    right: 9px;
+    margin-top: 12px;
+
+    border-right-width: 1px !important;
+    border-bottom-width: 1px !important;
+
+
+
+}
